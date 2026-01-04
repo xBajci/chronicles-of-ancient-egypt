@@ -3922,18 +3922,6 @@ const RAW_DATA = {
   }
 };
 
-export const LOCATIONS: LocationData[] = [
-  { id: 'giza', name: 'Giza / Memphis', coordinates: { x: 52, y: 25 }, aliases: ['Giza', 'Memphis'] },
-  { id: 'saqqara', name: 'Saqqara', coordinates: { x: 52, y: 30 }, aliases: ['Saqqara', 'Memphis region'] },
-  { id: 'alexandria', name: 'Alexandria', coordinates: { x: 45, y: 10 }, aliases: ['Alexandria'] },
-  { id: 'thebes', name: 'Thebes (Luxor)', coordinates: { x: 65, y: 65 }, aliases: ['Luxor', 'Karnak', 'Thebes', 'Luxor (Theby)', 'Deir el-Bahri'] },
-  { id: 'amarna', name: 'Akhetaten (Amarna)', coordinates: { x: 58, y: 45 }, aliases: ['Amarna', 'Akhetaten'] },
-  { id: 'aswan', name: 'Elephantine (Aswan)', coordinates: { x: 68, y: 80 }, aliases: ['Aswan', 'Elephantine'] },
-  { id: 'abydos', name: 'Abydos', coordinates: { x: 60, y: 55 }, aliases: ['Abydos'] },
-  { id: 'avaris', name: 'Avaris', coordinates: { x: 55, y: 15 }, aliases: ['Avaris'] },
-  { id: 'abu_simbel', name: 'Abu Simbel', coordinates: { x: 62, y: 92 }, aliases: ['Abu Simbel'] },
-];
-
 // Helper to create map of entities
 const entityMap = new Map<string, any>();
 RAW_DATA.entities.forEach(e => entityMap.set(e.id, e));

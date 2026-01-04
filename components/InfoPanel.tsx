@@ -47,16 +47,16 @@ const InfoPanel: React.FC<InfoPanelProps> = ({ event, onClose }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="relative flex-shrink-0 bg-gray-900 overflow-hidden flex flex-col justify-end border-b-4 border-[#d4af37]"
-        style={{ minHeight: '180px' }}
+        className="relative flex-shrink-0 bg-[#1a1a1a] overflow-hidden flex flex-col justify-end border-b-4 border-[#d4af37]"
+        style={{ minHeight: '220px' }}
       >
           {/* Abstract pattern background */}
-          <div className="absolute inset-0 opacity-20" style={{ 
-              backgroundImage: 'radial-gradient(circle at 50% 120%, #d4af37 0%, transparent 60%), url("https://www.transparenttextures.com/patterns/black-scales.png")' 
+          <div className="absolute inset-0 opacity-30" style={{ 
+              backgroundImage: 'radial-gradient(circle at 50% 120%, #d4af37 0%, transparent 60%)'
           }}></div>
           
-          <div className="relative p-6 md:p-8 w-full z-10">
-            <div className="flex flex-wrap items-center gap-3 mb-3">
+          <div className="relative p-6 md:p-10 w-full z-10">
+            <div className="flex flex-wrap items-center gap-3 mb-4">
                 <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 shadow-lg ${getTypeColor(event.type)} ${event.type === 'pharaoh' || event.type === 'monument' ? 'text-black' : 'text-white'}`}>
                     {getTypeIcon(event.type)}
                     {event.type}
@@ -72,11 +72,11 @@ const InfoPanel: React.FC<InfoPanelProps> = ({ event, onClose }) => {
                     </span>
                 )}
             </div>
-            <h1 className="text-3xl md:text-5xl font-bold cinzel-font text-[#fdf6e3] leading-tight drop-shadow-lg">
+            <h1 className="text-4xl md:text-6xl font-bold cinzel-font text-[#fdf6e3] leading-tight drop-shadow-lg uppercase">
                 {event.name}
             </h1>
-            <div className="mt-2 text-gray-400 font-serif text-lg flex items-center gap-2">
-                <Calendar size={16} />
+            <div className="mt-3 text-gray-400 font-serif text-lg flex items-center gap-2">
+                <Calendar size={18} />
                 {formatYear(event.displayStartYear ?? event.startYear)} – {formatYear(event.displayEndYear ?? event.endYear)}
             </div>
           </div>
